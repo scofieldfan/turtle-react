@@ -7,8 +7,8 @@
 // import { Greeting, LoginControl, MailBox, Page } from "./lesson6-if.js";
 //import { Item } from "./lesson7-list";
 // import { NamedForm, EssayForm, FlavorForm, Reservation } from "./lesson8-form";
-
-import { WelcomeDialog, App, SignUpDialog } from "./lesson9-combation";
+// import { WelcomeDialog, App, SignUpDialog } from "./lesson9-combation";
+import { FilterableProductTable } from "./lesson10-solution";
 import React from "react";
 import ReactDOM from "react-dom";
 function Welcome(props) {
@@ -20,4 +20,4 @@ function Test() {
     return element;
 }
 const messages = ["React", "Re:React", "Re:Re:React"];
-ReactDOM.render(<SignUpDialog />, document.getElementById("root"));
+ReactDOM.render(<FilterableProductTable />, document.getElementById("root"));
