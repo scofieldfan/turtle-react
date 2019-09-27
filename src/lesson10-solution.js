@@ -16,8 +16,8 @@ class ProductRow extends React.Component {
                         </span>
                     </td>
                 ) : (
-                    <td> {this.props.price}</td>
-                )}
+                        <td> {this.props.price}</td>
+                    )}
             </tr>
         );
     }
@@ -108,6 +108,31 @@ class FilterableProductTable extends React.Component {
             filterText: "",
             inStockOnly: false
         };
+        this.a = 1;
+        console.log("constructor...");
+    }
+
+    test = () => {
+        // test();
+        // console.log(test);
+        console.log(this.test);
+        let obj = {
+            test: `${this.a}`
+        }
+        console.log("test:", obj);
+        // console.log("aaa");
+    }
+
+    componentWillUnMount() {
+        console.log("destory unmount.....");
+    }
+
+    componentDidUpdate() {
+        console.log(" componentDidUpdate.....");
+    }
+    componentDidMount() {
+        console.log("componentDidMount");
+
     }
     handleChange(e) {
         this.setState({
@@ -119,7 +144,22 @@ class FilterableProductTable extends React.Component {
             inStockOnly: e.target.checked
         });
     }
+    shouldComponentUpdate() {
+        console.log("shouldComponentUpdate.....");
+        return true;
+    }
+
+    static getDerivedStateFromProps(props, stat) {
+        console.log("getDerivedStateFromProps....", props, stat);
+        return undefined;
+    }
+
+    getSnapshotBeforeUpdate() {
+        console.log("getSnapshotBeforeUpdate....");
+        return "snapshot"
+    }
     render() {
+        console.log("render...");
         let data = [
             {
                 category: "Sporting Goods",
