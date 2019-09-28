@@ -16,7 +16,7 @@ const initalState = {
 function todos(todos = [], action) {
     switch (action.type) {
         case ADD_TODO:
-            return [...todos, { text: action.text, completed: false }]
+            return [...todos, { text: action.text, completed: false, id: todos.length + 1 }]
 
         case TOGGLE_TODO:
             return todos.map((todo, index) => {

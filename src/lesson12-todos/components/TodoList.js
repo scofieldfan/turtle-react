@@ -17,13 +17,13 @@ Todo.PropTypes = {
     text: PropTypes.string.isRequired
 }
 
-TodoList.PropTypes = {
+TodoList.propTypes = {
     todos: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.number.isRequired,
             text: PropTypes.string.isRequired,
             completed: PropTypes.bool.isRequired
-        })
+        }).isRequired
     ).isRequired,
     onTodoClick: PropTypes.func.isRequired
 }
