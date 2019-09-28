@@ -8,7 +8,9 @@
 //import { Item } from "./lesson7-list";
 // import { NamedForm, EssayForm, FlavorForm, Reservation } from "./lesson8-form";
 // import { WelcomeDialog, App, SignUpDialog } from "./lesson9-combation";
-import { FilterableProductTable } from "./lesson10-solution";
+//import { FilterableProductTable } from "./lesson10-solution";
+import * as test from "./lesson12-todos/index.js";
+
 import React from "react";
 import ReactDOM from "react-dom";
 function Welcome(props) {
@@ -19,5 +21,6 @@ const element = <h1>Hello, World!!</h1>;
 function Test() {
     return element;
 }
-const messages = ["React", "Re:React", "Re:Re:React"];
-ReactDOM.render(<FilterableProductTable />, document.getElementById("root"));
+// const messages = ["React", "Re:React", "Re:Re:React"];
+// ReactDOM.render(element, document.getElementById("root"));
+// ReactDOM.render(<FilterableProductTable />, document.getElementById("root"));
