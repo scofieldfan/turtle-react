@@ -10,20 +10,22 @@
 // import { WelcomeDialog, App, SignUpDialog } from "./lesson9-combation";
 //import { FilterableProductTable } from "./lesson10-solution";
 //import * as test from "./lesson12-todos/index.js";
-import App from "./lesson13-router.js";
+import Example from "./lesson15-hooks-hello";
 
 import React from "react";
 import ReactDOM from "react-dom";
+
 function Welcome(props) {
-    return <div>Hi , {props.name}</div>;
+  return <div> Hi, {props.name} </div>;
 }
 //ReactDOM.render(<Welcome name="fan" />, document.getElementById("root"));
-const element = <h1>Hello, World!!</h1>;
+const element = <h1> Hello, World!! </h1>;
+
 function Test() {
-    return element;
+  return element;
 }
 // const messages = ["React", "Re:React", "Re:Re:React"];
 // ReactDOM.render(element, document.getElementById("root"));
 // ReactDOM.render(<FilterableProductTable />, document.getElementById("root"));
 
-ReactDOM.render(<App />, document.getElementById("root"))
+ReactDOM.render(<Example />, document.getElementById("root"));
