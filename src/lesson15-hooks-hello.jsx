@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-import ChatAPI from "./util/ChatAPI";
+let name = "ChatAPI";
+// import ChatAPI from `./util/${name}`;
 
 export function Example() {
   const [count, setCount] = useState(0);
@@ -50,10 +51,14 @@ export function useFriendStatus(FriendId) {
     setIsOnline(status.isOnline);
   }
   useEffect(() => {
-    ChatAPI.subscribeToFriendStatus(FriendId, handleStatusChange);
-    return () => {
-      ChatAPI.unsubscribeFromFriendStatus(FriendId, handleStatusChange);
-    };
+    async function test() {
+      //尝试用一下异步
+      const ChatAPI = await import(`./util/${name}`);
+      console.log(ChatAPI);
+      console.log(ChatAPI.default);
+      ChatAPI.default.subscribeToFriendStatus(FriendId, handleStatusChange);
+    }
+    test();
   });
   return isOnline;
 }
