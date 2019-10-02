@@ -51,14 +51,18 @@ export function useFriendStatus(FriendId) {
     setIsOnline(status.isOnline);
   }
   useEffect(() => {
+    let ChatAPI;
     async function test() {
       //尝试用一下异步
-      const ChatAPI = await import(`./util/${name}`);
+      ChatAPI = await import(`./util/${name}`);
       console.log(ChatAPI);
       console.log(ChatAPI.default);
       ChatAPI.default.subscribeToFriendStatus(FriendId, handleStatusChange);
     }
     test();
+    return () => {
+      ChatAPI.default.unsubscribeFromFriendStatus(FriendId, handleStatusChange);
+    };
   });
   return isOnline;
 }
