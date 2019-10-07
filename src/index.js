@@ -11,8 +11,7 @@
 //import { FilterableProductTable } from "./lesson10-solution";
 //import * as test from "./lesson12-todos/index.js";
 //import Example from "./lesson15-hooks-hello";
-import Example from "./lesson19-todo-reducer";
-
+import Example from "./lesson22-lazy-init";
 import React from "react";
 import ReactDOM from "react-dom";
 
